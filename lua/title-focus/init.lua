@@ -4,7 +4,7 @@ local M={}
 local config={
 	posts_path = "",
 	keymap = {
-		toggle = nil,
+		open = nil,
 	}
 }
 
@@ -293,8 +293,8 @@ function M.setup(opts)
 	vim.api.nvim_create_user_command('TitleFocus', function()
 		M.show_float()
 	end, {})
-	if config.keymaps and config.keymaps.toggle then
-		vim.keymap.set('n', config.keymaps.toggle, function()
+	if config.keymaps and config.keymaps.open then
+		vim.keymap.set('n', config.keymaps.open, function()
 			M.show_float()
 		end, {
 			noremap = true,
